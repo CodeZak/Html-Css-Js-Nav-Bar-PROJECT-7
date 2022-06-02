@@ -1,21 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
 
-
-main .test {
-    background-color: red;
-    width: 100px;
-    display: none;
-}
-
-.test2:hover  .test {
-    display: block;
-}
-
-
-
-*{
-    font-family: 'Poppins', sans-serif;
+* {
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,12 +12,10 @@ body {
     background-color: rgb(233, 242, 248);
 }
 li {
-    list-style: none ;
+    list-style: none;
     list-style-position: inside;
     margin: 0;
     padding: 0;
-  
-
 }
 
 a {
@@ -38,8 +23,6 @@ a {
     font-size: 1.1rem;
     color: rgb(13, 99, 126);
     transition: 0.4s;
-
-    
 }
 
 a:hover {
@@ -49,14 +32,12 @@ a:hover {
 header {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 10px 0px rgb(185, 184, 184);
-
-
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     max-width: 1100px;
@@ -75,25 +56,35 @@ header {
     flex-direction: row;
 }
 
-.social-icons li, .menu li {
+.social-icons li,
+.menu li {
     margin-left: 15px;
 }
 
 .more {
     display: none;
 }
+
+/****************************************************/
+
 @media only screen and (max-width: 730px) {
-    .social-icons{
+    .social-icons {
         display: none;
+    }
+
+    .logo {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11.1px 10px;
     }
 
     a:hover {
         color: rgb(22, 119, 168);
         transform: translateX(10px);
         transform: translateX(100px);
-
     }
-
 
     .menu ul {
         flex-direction: column;
@@ -103,47 +94,45 @@ header {
         padding: 10px;
         margin: 0px;
         transition: 0.4s;
-
-
+        cursor: pointer;
     }
 
     .menu ul li:hover {
         background-color: rgb(127, 212, 255);
-
+        text-indent: 8px;
     }
     .container {
-        justify-content:space-between;
+        flex-direction: column;
+        padding: 0;
     }
 
     .more {
-        display: flex;
+        display: block;
     }
 
     .more i {
-        font-size: 1.4em ;
+        font-size: 1.4em;
         transition: 0.4s;
     }
-    
+
     .more i:hover {
         transform: rotate(90deg);
-        
+        cursor: pointer;
     }
-    
-  
+
     .menu {
-        display: block;
-        background-color:  rgb(255, 255, 255);
-        position: fixed;
-        margin-top: 250px;
-        margin-left: -15px;
         width: 100%;
-        box-shadow: 0px 4px 4px -2px rgb(185, 184, 184);
+    }
+
+    .menu {
+        height: 0px;
+        overflow: hidden;
+        transition: 0.6s;
 
     }
 
-.more:hover + .menu {
-        display: flex;
+    .mobile_menu {
+        transition: 0.6s;
+        height: 180px;
     }
-    
-
-}  
+}
